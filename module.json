@@ -3,8 +3,8 @@
   "title": "Push Token Back - Reveal Tokens Buried Behind Each Other",
   "description": "With Push Token Back you can float your cusor over foreground obstructing tokens, press a hot-key and send them to the back of stack. This allows you to access the token you want, even when was hidden behind others.<br><br> Push Button Back works on your own canvas so it will not confuse other players or alter their view.<br><br>Great for when the entire party falls into the same 5x5 pit.",
   "author": "David Zvekic",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "minimumCoreVersion": "0.7.9",
-  "manifest": "https://github.com/David-Zvekic/pushTokenBack/releases/download/0.0.1/module.json",
-  "download": "https://github.com/David-Zvekic/pushTokenBack/releases/download/0.0.1/module.zip"
+  "manifest": "https://github.com/David-Zvekic/pushTokenBack/releases/download/master/module.json",
+  "download": "https://github.com/David-Zvekic/pushTokenBack/releases/download/master/module.zip"
 }
