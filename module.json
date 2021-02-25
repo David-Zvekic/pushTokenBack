@@ -5,6 +5,7 @@
   "author": "David Zvekic",
   "version": "0.0.2",
   "minimumCoreVersion": "0.7.9",
+  "url":"https://github.com/David-Zvekic/pushTokenBack",
   "manifest": "https://github.com/David-Zvekic/pushTokenBack/releases/download/master/module.json",
   "download": "https://github.com/David-Zvekic/pushTokenBack/releases/download/master/module.zip"
 }
