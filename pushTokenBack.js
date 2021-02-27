@@ -1,18 +1,60 @@
 // pushTokenBack
 // (c) 2021 David Zvekic
-// permission granted to distribute as per LICENSE file
+// permission granted to use and distribute as per LICENSE file
 
-
-// This version simply sets up a variable which will track if any token is being hovered.
 
 let pushTokenBack = new Object();
 pushTokenBack.hoverToken= new Object();
 pushTokenBack.hoverToken.hoveredTarget=0;
+pushTokenBack.hotkey='';
+
+
+
+
+Hooks.on('init', () => {
+
+game.settings.register('pushTokenBack', 'hotkey', {
+  name: game.i18n.localize("PUSHTOKENBACK.SelectHotKey"),
+  hint: game.i18n.localize("PUSHTOKENBACK.SelectHotKeyHelp"),
+  scope: 'client',   
+  config: true,      
+  type: String,     
+  default: "Z",
+  
+  onChange: value => { pushTokenBack.hotkey = value // value is the new value of the setting
+    console.log(value)
+  }
+});
+
+pushTokenBack.hotkey=game.settings.get('pushTokenBack', 'hotkey');
+
+
+});
+
+
+
+
+
+
+pushTokenBack.pushTokenBackListener = function(event){
+    if ( event.isComposing ) return; 
+  
+   if (event.key==pushTokenBack.hotkey && !event.repeat) pushToBack();
+
+};
+
+ 
 
 pushTokenBack.hoverToken.hook= Hooks.on('hoverToken',(token,hoverON)=>{
-if (hoverON) pushTokenBack.hoverToken.hoveredTarget=token;
-else delete pushTokenBack.hoverToken.hoveredTarget;
-  
+	
+if (hoverON) {
+	pushTokenBack.hoverToken.hoveredTarget=token;
+	window.addEventListener('keydown', pushTokenBack.pushTokenBackListener );
+}
+else {
+    window.removeEventListener('keydown', pushTokenBack.pushTokenBackListener );
+	delete pushTokenBack.hoverToken.hoveredTarget;
+}
 });
 
 

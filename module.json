@@ -3,7 +3,7 @@
   "title": "Push Token Back - Reveal Tokens Buried Behind Each Other",
   "description": "See the Token you really need: For when your entire party falls into a pit full of annoyed badgers.",
   "author": "David Zvekic",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "compatibleCoreVersion": "0.7.9",
   "url":"https://github.com/David-Zvekic/pushTokenBack",
   "manifest": "https://github.com/David-Zvekic/pushTokenBack/releases/download/master/module.json",
@@ -16,6 +16,12 @@
     "path": "/packs/pushtokenback.db",
     "entity": "Macro",
 	"package":"module"
-  }
+  }],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
   ]
 }
